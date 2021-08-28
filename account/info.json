@@ -1,0 +1,12 @@
+{
+    "author": ["disrspec"],
+    "min_bot_version": "3.1.1",
+    "short":"The Account Cog",
+    "description":"Official LAPT Profile Cog.",
+    "name":"Account",
+    "tags":[
+        "Account",
+        "Profile"
+   ],
+   "install_msg":"You just installed **Account.py**! \nOfficial LAPT Profile Cog.\n\n**"
+}
