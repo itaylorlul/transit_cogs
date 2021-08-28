@@ -87,7 +87,7 @@ class Account(commands.Cog):
     @update.command(pass_context=True)
     @commands.guild_only()
     async def name(self, ctx, *, name):
-        """Tell us name yourself"""
+        """Your Name"""
         
         server = ctx.guild
         user = ctx.author
@@ -99,7 +99,7 @@ class Account(commands.Cog):
             data.add_field(name="Error:warning:",value="Sadly, this feature is only available for people who had registered for an account. \n\nYou can register for a account today for free. All you have to do is say `{}signup` and you'll be all set.".format(prefix))
             await ctx.send(embed=data)
         else:
-            await self.config.member(user).name.set(name)
+            await self.config.member(user).Name.set(name)
             data = discord.Embed(colour=user.colour)
             data.add_field(name="Congrats!:sparkles:",value="You have updated your name Me to {}".format(name))
             await ctx.send(embed=data)
@@ -140,7 +140,7 @@ class Account(commands.Cog):
             data.add_field(name="Error:warning:",value="Sadly, this feature is only available for people who had registered for an account. \n\nYou can register for a account today for free. All you have to do is say `{}signup` and you'll be all set.".format(prefix))
             await ctx.send(embed=data)
         else:
-            await self.config.member(user).rank.set(rank)
+            await self.config.member(user).Rank.set(rank)
             data = discord.Embed(colour=user.colour)
             data.add_field(name="Congrats!:sparkles:",value="You have set your rank to {}".format(rank))
             await ctx.send(embed=data)
